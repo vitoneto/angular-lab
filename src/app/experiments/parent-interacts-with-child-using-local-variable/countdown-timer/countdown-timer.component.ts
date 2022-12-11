@@ -1,15 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-countdown-timer',
-  templateUrl: './countdown-timer.component.html',
-  styleUrls: ['./countdown-timer.component.scss']
+	selector: 'app-countdown-timer',
+	templateUrl: './countdown-timer.component.html',
+	styleUrls: ['./countdown-timer.component.scss']
 })
-export class CountdownTimerComponent implements OnInit {
+export class CountdownTimerComponent implements OnDestroy {
+	intervalId = 0;
+	message = '';
+	seconds = 11;
 
-  constructor() { }
+	ngOnDestroy() {
+		this.clearTimer();
+	}
 
-  ngOnInit(): void {
-  }
+	start() {
+		this.countDown();
+	}
+	stop() {
+		this.clearTimer();
+		this.message = `Holding at T-${this.seconds} seconds`;
+	}
 
+	private clearTimer() {
+		clearInterval(this.intervalId);
+		window.alert(this.intervalId); // mine
+	}
+
+	private countDown() {
+		this.clearTimer();
+		this.intervalId = window.setInterval(() => {
+			this.seconds -= 1;
+			if (this.seconds === 0) {
+				this.message = 'Blast off!';
+			} else {
+				if (this.seconds < 0) {
+					this.seconds = 10;
+				}
+				this.message = `T-${this.seconds} seconds and counting`;
+			}
+		}, 1000);
+	}
 }
