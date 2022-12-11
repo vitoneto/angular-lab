@@ -24,7 +24,6 @@ export class CountdownTimerComponent implements OnDestroy {
 
 	private clearTimer() {
 		clearInterval(this.intervalId);
-		window.alert(this.intervalId); // mine
 	}
 
 	private countDown() {
