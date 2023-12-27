@@ -7,6 +7,7 @@ import { LabOverviewComponent } from './pages/lab-overview/lab-overview.componen
 import { CountdownLocalVarParentComponent } from './experiments/parent-interacts-with-child-using-local-variable/countdown-local-var-parent/countdown-local-var-parent.component';
 import { CountdownTimerComponent } from './experiments/parent-interacts-with-child-using-local-variable/countdown-timer/countdown-timer.component';
 import { VersionChildComponent } from './experiments/intercept-input-property-changes-with-ngOnChanges/version-child/version-child.component';
+import { VersionParentComponent } from './experiments/intercept-input-property-changes-with-ngOnChanges/version-parent/version-parent.component';
 
 @NgModule({
 	declarations: [
@@ -14,7 +15,8 @@ import { VersionChildComponent } from './experiments/intercept-input-property-ch
 		LabOverviewComponent,
 		CountdownLocalVarParentComponent,
   		CountdownTimerComponent,
-  		VersionChildComponent
+  		VersionChildComponent,
+    VersionParentComponent
 	],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],
