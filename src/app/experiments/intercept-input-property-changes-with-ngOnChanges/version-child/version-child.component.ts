@@ -15,7 +15,7 @@ export class VersionChildComponent implements OnChanges {
 		const log: string[] = [];
 		for (const propName in changes) {
 			const changedProp = changes[propName];
-			const to = JSON.stringify(changedProp.currentValue);
+			const to = changedProp.currentValue.toString();
 			if(changedProp.isFirstChange()) {
 				log.push(`Initial value of ${propName} set to ${to}`);
 			} else {
