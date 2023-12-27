@@ -1,4 +1,11 @@
-<h2>source code version</h2>
-<button type="button" (click)="newMinor()">New minor version</button>
-<button type="button" (click)="newMajor()">New manjor version</button>
-<app-version-child [major]="major" [minor]="minor"></app-version-child>
+<div id="content">
+	<a class="c-pointer" href="https://angular.io/guide/component-interaction#intercept-input-property-changes-with-ngonchanges" target="_blank">Link</a>
+	<h2>Source code version</h2>
+
+	<div id="version-buttons">
+		<button type="button" (click)="newMinor()">New minor version</button>
+		<button type="button" (click)="newMajor()">New manjor version</button>
+	</div>
+
+	<app-version-child [major]="major" [minor]="minor"></app-version-child>
+</div>

@@ -1,0 +1,18 @@
+:host {
+	h3 {
+		margin: 10px 0;
+		font-size: 18px;
+	}
+
+	h4 {
+		margin-bottom: 10px;
+	}
+
+	ul li {
+		margin: 10px 0;
+		&::before {
+			content: '•';
+			margin-right: 5px;
+		}
+	}
+}
