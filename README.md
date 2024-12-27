@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Prerequisites:
+Angular CLI: 14.2.13
+node: 22.12.0 (Unsuported) but it works.
+Package Manager: npm 10.9.0
