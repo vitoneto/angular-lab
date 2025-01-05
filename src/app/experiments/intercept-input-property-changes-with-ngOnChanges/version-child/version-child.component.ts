@@ -1,9 +1,10 @@
 import { Component, OnInit, OnChanges, SimpleChange, SimpleChanges, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-version-child',
-  templateUrl: './version-child.component.html',
-  styleUrls: ['./version-child.component.scss']
+    selector: 'app-version-child',
+    templateUrl: './version-child.component.html',
+    styleUrls: ['./version-child.component.scss'],
+    standalone: false
 })
 export class VersionChildComponent implements OnChanges {
 
